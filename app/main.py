@@ -1,20 +1,21 @@
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 
 from app.database import engine
+from app.models import models
 from app.routers import projects, milestones, revisions, quotes, auth, activity, notifications
 from app.schemas.common import HomeResponse, HealthResponse
 
+# Create database tables on startup if they do not exist
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Revision Shield API",
     description="Freelance Revision Management System",
     version="1.0.0"
 )
-
 
 app.add_middleware(
     CORSMiddleware,
@@ -28,7 +29,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 app.include_router(projects.router)
 app.include_router(milestones.router)
@@ -64,5 +64,3 @@ def health():
             "application": "Revision Shield",
             "database": "disconnected"
         }
-
-

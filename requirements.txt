@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-sqlalchemy
+SQLAlchemy==2.1.8
 pydantic
 python-dotenv
 pytest
