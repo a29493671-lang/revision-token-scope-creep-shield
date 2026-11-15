@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-dotenv
+pytest
+httpx
+PyJWT[crypto]
+pwdlib[argon2]
+python-multipart
+alembic
