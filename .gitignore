@@ -1,0 +1,29 @@
+# Environment secrets
+.env
+.env.*
+
+# Keep the example environment file
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and backups
+*.db
+*.sqlite
+*.sqlite3
+*.db-*
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
