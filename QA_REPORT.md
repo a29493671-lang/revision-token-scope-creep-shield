@@ -1,4 +1,4 @@
-# QA & Testing Report (Person 4)
+# QA & Testing Report
 
 ## 1. Automated Test Suite & Execution Evidence
 
