@@ -9,3 +9,5 @@ PyJWT[crypto]
 pwdlib[argon2]
 python-multipart
 alembic
+streamlit
+requests
