@@ -26,9 +26,9 @@
 
 | Bug ID | Severity | Reproduction Steps | Expected Result | Actual Result | Owner | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **BUG-01** | Medium | Copy `.env.example` to `.env` and run `pytest` | Works out of the box for local/CI tests | Raises `RuntimeError: A valid SECRET_KEY must be configured in .env` | Person 2 / 5 | Open |
-| **BUG-02** | Low | Run `pytest` with a 31-byte `SECRET_KEY` | No JWT key-length warnings | PyJWT emits `InsecureKeyLengthWarning` (key < 32 bytes for SHA256) | Person 2 | Open |
-| **BUG-03** | Low | Inspect repository root structure | Unified `backend/` or `app/` directory | Both `app/` and `backend/` folders exist in root | Person 2 / 5 | Open |
+| **BUG-01** | Medium | Copy `.env.example` to `.env` and run `pytest` | Works out of the box for local/CI tests | Raises `RuntimeError: A valid SECRET_KEY must be configured in .env` | Person 2 / 5 | Resolved |
+| **BUG-02** | Low | Run `pytest` with a 31-byte `SECRET_KEY` | No JWT key-length warnings | PyJWT emits `InsecureKeyLengthWarning` (key < 32 bytes for SHA256) | Person 2 | Resolved |
+| **BUG-03** | Low | Inspect repository root structure | Unified `backend/` or `app/` directory | Both `app/` and `backend/` folders exist in root | Person 2 / 5 | Resolved |
 | **BUG-04** | Medium | Check repository for Streamlit UI | `frontend/` folder present for UI verification | Frontend UI merged to `main` and E2E walkthrough verified | Person 1 | Resolved |
 
 ## 4. Quality Summary & Known Limitations
